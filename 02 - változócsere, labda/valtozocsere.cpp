@@ -11,13 +11,27 @@ int main()
   tmp = a;
   a = b;
   b = tmp;
-  cout << "A*: " << a << " B*: " << b << endl;
+  cout << "A: " << a << " B: " << b << endl;
   // EXORRAL
   a = 3;
   b = 5;
   a = a ^ b;
-  b = b ^ a;
+  b = a ^ b;
   a = a ^ b;
-  cout << "A**: " << a << " B**: " << b << endl;
+  cout << "A^: " << a << " B^: " << b << endl;
+  // SZORZATTAL
+  a = 3;
+  b = 5;
+  a = a * b;
+  b = a / b;
+  a = a / b;
+  cout << "A*: " << a << " B*: " << b << endl;
+  // KÜLÖNBSÉGGEL
+  a = 3;
+  b = 5;
+  a = a + b;
+  b = a - b;
+  a = a - b;
+  cout << "A-: " << a << " B-: " << b << endl;
   return 0;
 }
